@@ -14,4 +14,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Title.unity
     guid: d2076cdebf3c546d3bed8b3502cbd762
+  - enabled: 1
+    path: Assets/Scenes/Comic.unity
+    guid: 1cd3ab1dc7584432abbf1011a1096204
   m_configObjects: {}
