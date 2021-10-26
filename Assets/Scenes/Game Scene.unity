@@ -257,10 +257,10 @@ RectTransform:
   m_Father: {fileID: 58209540}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 1, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -519.64874, y: 154.65967}
-  m_SizeDelta: {x: 269.6564, y: -408.3988}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -189.01794, y: 204.14812}
+  m_SizeDelta: {x: 201.4445, y: 15.991}
   m_Pivot: {x: 1, y: 0.5}
 --- !u!114 &192666532
 MonoBehaviour:
@@ -367,6 +367,7 @@ GameObject:
   - component: {fileID: 324930324}
   - component: {fileID: 324930326}
   - component: {fileID: 324930325}
+  - component: {fileID: 324930327}
   m_Layer: 5
   m_Name: Image
   m_TagString: Untagged
@@ -390,8 +391,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -29.393, y: -17.2}
-  m_SizeDelta: {x: 368.7704, y: 207.4333}
+  m_AnchoredPosition: {x: -21.957, y: -13.3}
+  m_SizeDelta: {x: 277.2906, y: 155.976}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &324930325
 MonoBehaviour:
@@ -413,9 +414,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: b4222444aad69814aa6f24ac4b8c1ada, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 192fd53d0138d484b89f90a9566a9ad2, type: 3}
   m_Type: 0
-  m_PreserveAspect: 0
+  m_PreserveAspect: 1
   m_FillCenter: 1
   m_FillMethod: 4
   m_FillAmount: 1
@@ -431,6 +432,25 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 324930323}
   m_CullTransparentMesh: 1
+--- !u!95 &324930327
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 324930323}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: f19b3bd13d6758e40b215fdfd12dad15, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &379693590
 GameObject:
   m_ObjectHideFlags: 0
@@ -447,6 +467,7 @@ GameObject:
   - component: {fileID: 379693597}
   - component: {fileID: 379693593}
   - component: {fileID: 379693598}
+  - component: {fileID: 379693599}
   m_Layer: 7
   m_Name: Player
   m_TagString: Untagged
@@ -494,7 +515,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 1
-  m_Sprite: {fileID: 21300000, guid: d0d21e19b1d7dac4eb3bd51ad659efed, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 54b2a6fc6c1516b45828e54cd99403e2, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -513,7 +534,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 379693590}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 4.15, y: -3.14, z: 0}
+  m_LocalPosition: {x: 5.773, y: -3.849, z: 0}
   m_LocalScale: {x: 0.2917, y: 0.2917, z: 0.2917}
   m_Children:
   - {fileID: 1851717569}
@@ -534,9 +555,9 @@ CircleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 3.58, y: -2.01}
+  m_Offset: {x: 2.0913856, y: -1.0056533}
   serializedVersion: 2
-  m_Radius: 2.11
+  m_Radius: 0.88236195
 --- !u!50 &379693594
 Rigidbody2D:
   serializedVersion: 4
@@ -595,6 +616,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   controller: {fileID: 379693595}
   runSpeed: 400
+  animator: {fileID: 379693599}
   heal: {fileID: 192666532}
   maxHealth: 100
   currHealth: 0
@@ -611,18 +633,18 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.30843735, y: -1.7066205}
+  m_Offset: {x: 0.1298027, y: -0.7748331}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 19.2, y: 10.8}
+    oldSize: {x: 9.6, y: 5.4}
     newSize: {x: 19.2, y: 10.8}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 7.790552, y: 4.7624984}
+  m_Size: {x: 3.9201555, y: 2.2515094}
   m_EdgeRadius: 0
 --- !u!58 &379693598
 CircleCollider2D:
@@ -637,9 +659,28 @@ CircleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -3.37, y: -2.01}
+  m_Offset: {x: -1.8939252, y: -0.9902766}
   serializedVersion: 2
-  m_Radius: 2.11
+  m_Radius: 0.89237845
+--- !u!95 &379693599
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 379693590}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: d6737beb09edc1f48a58ed7d703670b5, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0

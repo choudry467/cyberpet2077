@@ -8,7 +8,7 @@ public class PlayerMovement : MonoBehaviour
     public float runSpeed = 400f;
     float horizontalMove = 0f;
     bool jump = false;
-
+    public Animator animator;
     //Tests
 
     public HealthBar heal;
@@ -23,6 +23,14 @@ public class PlayerMovement : MonoBehaviour
     void Update()
     {
         horizontalMove = Input.GetAxisRaw("Horizontal");
+        if(horizontalMove != 0)
+        {
+            animator.SetBool("Moving", true);
+        }
+        else
+        {
+            animator.SetBool("Moving", false);
+        }
         if (Input.GetButtonDown("Jump"))
         {
             jump = true;
