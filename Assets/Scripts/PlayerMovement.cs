@@ -33,6 +33,7 @@ public class PlayerMovement : MonoBehaviour
         }
         if (Input.GetButtonDown("Jump"))
         {
+            animator.SetTrigger("IsFlying2");
             jump = true;
             currHealth -= 10;
             heal.SetHealth(currHealth);
@@ -42,5 +43,6 @@ public class PlayerMovement : MonoBehaviour
     {
         controller.Move(horizontalMove* Time.fixedDeltaTime, jump, runSpeed);
         jump = false;
+
     }
 }
