@@ -15,6 +15,8 @@ public class PlayerMovement : MonoBehaviour
     public int maxHealth = 100;
     public int currHealth;
     // Update is called once per frame
+    public AudioSource jumpSound;
+
     private void Start()
     {
         currHealth = maxHealth;
@@ -37,6 +39,7 @@ public class PlayerMovement : MonoBehaviour
             jump = true;
             currHealth -= 10;
             heal.SetHealth(currHealth);
+            jumpSound.Play();
         }
     }
     void FixedUpdate()
