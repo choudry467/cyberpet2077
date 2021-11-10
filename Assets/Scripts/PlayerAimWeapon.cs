@@ -44,6 +44,5 @@ public class PlayerAimWeapon : MonoBehaviour
 
     void Shoot(){
         Instantiate(bullet, Firepoint.position, Firepoint.rotation);
-        Debug.Log("working");
     }
 }
