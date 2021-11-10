@@ -1258,6 +1258,7 @@ MonoBehaviour:
   enemies:
   - {fileID: 4334935620599241551, guid: 4c2ae7823f06546f283de64078239417, type: 3}
   - {fileID: 8265381002874006328, guid: cc0a3d1575ffd4227963ff31d813b5ad, type: 3}
+  - {fileID: 8476035605272593566, guid: db14cb0eec60fce49aa32c3e82ef38f4, type: 3}
 --- !u!1 &1047287431
 GameObject:
   m_ObjectHideFlags: 0
