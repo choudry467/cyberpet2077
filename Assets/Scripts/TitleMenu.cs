@@ -11,6 +11,7 @@ public class TitleMenu : MonoBehaviour
     public AudioMixer audioMixer;
     public Slider volSlider;
     public string newScene;
+   // float lastVol;
 
     //declare Menus to enable/disable
     public GameObject TitleScreenMenu;
@@ -51,6 +52,7 @@ public class TitleMenu : MonoBehaviour
     {
         if (muteToggle.isOn)
         {
+           // audioMixer.g;
             audioMixer.SetFloat("Volume", -80f);
             volSlider.value = -80;
 
