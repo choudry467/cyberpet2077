@@ -214,6 +214,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 100
+  scrap: {fileID: 6408717436220674528, guid: 28d0dbeef9903c04da0560768ecb07f1, type: 3}
 --- !u!1 &9095864749303885031
 GameObject:
   m_ObjectHideFlags: 0

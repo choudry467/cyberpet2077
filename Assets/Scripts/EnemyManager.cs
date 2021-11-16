@@ -21,4 +21,6 @@ public class EnemyManager : MonoBehaviour
         int randomP = Mathf.RoundToInt(Random.Range(0f, enemies.Length-1));
         Instantiate(enemies[randomP], spawnPoints[randomS].position, Quaternion.identity);
     }
+    
+
 }
