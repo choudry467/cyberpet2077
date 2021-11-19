@@ -9,18 +9,24 @@ public class PlayerMovement : MonoBehaviour
     float horizontalMove = 0f;
     bool jump = false;
     public Animator animator;
-    //Tests
+    
+    public int scraps = 10;
 
     public HealthBar heal;
+
+    public CollectBar col;
     public int maxHealth = 100;
-    public int currHealth;
+    int currHealth;
     // Update is called once per frame
     public AudioSource jumpSound;
+
+    public Teleporter telScript;
 
     private void Start()
     {
         currHealth = maxHealth;
         heal.SetMaxHealth(maxHealth);
+        col.Initial();
     }
     void Update()
     {
@@ -37,8 +43,6 @@ public class PlayerMovement : MonoBehaviour
         {
             animator.SetTrigger("IsFlying2");
             jump = true;
-            currHealth -= 10;
-            heal.SetHealth(currHealth);
             jumpSound.Play();
         }
     }
@@ -46,6 +50,20 @@ public class PlayerMovement : MonoBehaviour
     {
         controller.Move(horizontalMove* Time.fixedDeltaTime, jump, runSpeed);
         jump = false;
+
+    }
+
+    public void Damage(int damage){
+        currHealth -= damage;
+        heal.SetHealth(currHealth);
+    }
+
+    public void Collect(){
+        if (scraps > 0){
+            scraps--;
+            col.Collected(10-scraps);
+        }else
+            telScript.Fixed();
 
     }
 }

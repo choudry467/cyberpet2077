@@ -20,4 +20,7 @@ EditorBuildSettings:
   - enabled: 0
     path: 
     guid: 00000000000000000000000000000000
+  - enabled: 1
+    path: Assets/Scenes/GameOverComic.unity
+    guid: 3fac06d76d6d74e16a52b89c8ce80259
   m_configObjects: {}
