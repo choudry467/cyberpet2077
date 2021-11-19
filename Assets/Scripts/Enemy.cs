@@ -8,6 +8,7 @@ public class Enemy : MonoBehaviour
     public delegate void EnemyKilled();
     public static event EnemyKilled OnEnemyKilled;
     public GameObject scrap;
+    public Transform sprite;
     public void TakeDamage (int damage){
         health -= damage;
         if (health <= 0){
@@ -17,7 +18,7 @@ public class Enemy : MonoBehaviour
 
     private void Die(){
         Destroy(gameObject);
-        Instantiate(scrap, transform.position, Quaternion.identity);
+        Instantiate(scrap, sprite.position, Quaternion.identity);
         if (OnEnemyKilled != null){
             OnEnemyKilled();
         }
