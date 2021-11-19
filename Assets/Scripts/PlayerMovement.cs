@@ -62,8 +62,9 @@ public class PlayerMovement : MonoBehaviour
         if (scraps > 0){
             scraps--;
             col.Collected(10-scraps);
-        }else
-            telScript.Fixed();
+            if (scraps == 0)
+                telScript.Fixed();
+        }
 
     }
 }
