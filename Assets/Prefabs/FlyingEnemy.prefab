@@ -230,6 +230,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 100
+  scrap: {fileID: 6408717436220674528, guid: 28d0dbeef9903c04da0560768ecb07f1, type: 3}
 --- !u!58 &7110725888324494010
 CircleCollider2D:
   m_ObjectHideFlags: 0
