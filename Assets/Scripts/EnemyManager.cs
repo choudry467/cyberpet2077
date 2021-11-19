@@ -16,6 +16,10 @@ public class EnemyManager : MonoBehaviour
     void OnEnable(){
         Enemy.OnEnemyKilled += SpawnNewEnemy;
     }
+
+    void OnDisable(){
+        Enemy.OnEnemyKilled -= SpawnNewEnemy;
+    }
     public void SpawnNewEnemy(){
         int randomS = Mathf.RoundToInt(Random.Range(0f, spawnPoints.Length-1));
         int randomP = Mathf.RoundToInt(Random.Range(0f, enemies.Length-1));

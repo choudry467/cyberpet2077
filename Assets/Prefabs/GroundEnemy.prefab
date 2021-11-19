@@ -17,6 +17,7 @@ GameObject:
   - component: {fileID: 8963932689351027835}
   - component: {fileID: 2292952111055501136}
   - component: {fileID: 6396426701644567097}
+  - component: {fileID: -705713135071384577}
   m_Layer: 8
   m_Name: GroundEnemy
   m_TagString: Untagged
@@ -101,7 +102,7 @@ MonoBehaviour:
   repathRate: 0.5
   canSearch: 1
   canMove: 1
-  maxSpeed: 3
+  maxSpeed: 2
   gravity: {x: NaN, y: NaN, z: NaN}
   groundMask:
     serializedVersion: 2
@@ -277,6 +278,22 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &-705713135071384577
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4634201424729006757}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5d25bd92faaa74f028653a16ecd2bd2a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Firepoint: {fileID: 4634201424729006758}
+  bullet: {fileID: 1888608741785682456, guid: 3bd301a2d267c4445ba96b689d6dbff3, type: 3}
+  timeBetweenShots: 3
+  MaxDist: 7
 --- !u!1 &4634201426174578414
 GameObject:
   m_ObjectHideFlags: 0
