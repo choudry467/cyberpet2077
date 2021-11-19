@@ -268,7 +268,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 100
-  scrap: {fileID: 6408717436220674528, guid: 28d0dbeef9903c04da0560768ecb07f1, type: 3}
+  scrap: {fileID: 6408717436220674528, guid: 2ff900adf5bcb4aac86ed581962899c0, type: 3}
 --- !u!114 &5861797617066072699
 MonoBehaviour:
   m_ObjectHideFlags: 0
